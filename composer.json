@@ -12,5 +12,9 @@
             "homepage": "https://sebastianiturra.com",
             "role": "Cofounder"
         }
-    ]
+    ],
+    "require": {
+        "php": ">=5.0"
+    },
+    "minimum-stability": "dev"
 }
