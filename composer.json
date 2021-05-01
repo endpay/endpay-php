@@ -1,0 +1,16 @@
+{
+    "name": "endpay/endpay-sdk",
+    "type": "library",
+    "description": "Implementation API REST endpay in PHP",
+    "keywords": ["webpay","pagos","chile","php"],
+    "homepage": "https://endpay.cl",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sebastián Iturra",
+            "email": "iturra.sebastian@hotmail.com",
+            "homepage": "https://sebastianiturra.com",
+            "role": "Cofounder"
+        }
+    ]
+}
