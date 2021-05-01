@@ -1,8 +1,8 @@
 {
     "name": "endpay/endpay-sdk",
     "type": "library",
-    "description": "Implementation API REST endpay in PHP",
-    "keywords": ["webpay","pagos","chile","php"],
+    "description": "Endpay PHP SDK",
+    "keywords": ["webpay", "pagos", "chile", "php", "api", "sdk"],
     "homepage": "https://endpay.cl",
     "license": "MIT",
     "authors": [
@@ -14,7 +14,12 @@
         }
     ],
     "require": {
-        "php": ">=5.0"
+        "php": ">=7.0"
+    },
+    "autoload":{
+        "psr-4": {
+            "Endpay\\": "src/"
+        }
     },
     "minimum-stability": "stable"
 }
