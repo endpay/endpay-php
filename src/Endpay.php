@@ -15,10 +15,16 @@ class Endpay {
     function __construct($production = true) {
         $this->apiVersion = '1.0';
         $this->timeout = 5.0;
-        $this->base_uri = $production ? "https://api.endpay.cl/{$this->apiVersion}/" : "http://localhost:3000/{$this->apiVersion}/";
+        $this->base_uri = $production ? "https://api.endpay.cl/{$this->apiVersion}/" : "http://localhost:3000/api/{$this->apiVersion}/";
         $this->setClient();
     }
 
+    /**
+     * Set Commerce ID
+     *
+     * @param string $commerceId
+     * @return void
+     */
     public function setCommerceId($commerceId){
         $this->commerceId  = $commerceId;
         $this->setClient();
@@ -45,6 +51,11 @@ class Endpay {
         ]);
     }
 
+    /**
+     * Instance class Payments
+     *
+     * @return object
+     */
     public function payments() {
         return new Payments($this->client);
     }

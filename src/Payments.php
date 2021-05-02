@@ -2,6 +2,9 @@
 
 namespace Endpay;
 
+/**
+ * Interact with the Endpay Payments API
+ */
 class Payments {
     private $client;
     
@@ -9,19 +12,39 @@ class Payments {
         $this->client = $client;
     }
     
+    /**
+     * Create payment
+     *
+     * @param array $params
+     * @return object
+     */
     public function create($params = []) {
         $response = $this->client->request('POST', 'payments/create', [
             'form_params' => $params
         ]);
 
-        return $response->getBody();
+        return json_decode($response->getBody(), true);
     }
 
-    public static function read() {
-        echo 'read - Payment';
+    /**
+     * Get payment
+     *
+     * @param integer $id
+     * @return object
+     */
+    public function read($id) {
+        $response = $this->client->request('GET', "payments/read/{$id}");
+
+        return json_decode($response->getBody(), true);
     }
     
-    public static function delete() {
+    /**
+     * Delete payment
+     *
+     * @param integer $id
+     * @return object
+     */
+    public static function delete($id) {
         echo 'delete - Payment';
     }
 }
