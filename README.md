@@ -14,7 +14,7 @@ composer require endpay/endpay-sdk
 
 https://api-docs.endpay.cl
 
-## Use
+## Usage
 
 ### Instance and set configurations
 ```php
