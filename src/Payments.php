@@ -3,9 +3,18 @@
 namespace Endpay;
 
 class Payments {
+    private $client;
     
-    public static function create() {
-        echo 'create - Payment';
+    function __construct($client){
+        $this->client = $client;
+    }
+    
+    public function create($params = []) {
+        $response = $this->client->request('POST', 'payments/create', [
+            'form_params' => $params
+        ]);
+
+        return $response->getBody();
     }
 
     public static function read() {

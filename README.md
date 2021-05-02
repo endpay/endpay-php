@@ -12,4 +12,9 @@ Install package via composer
 ## Use
 TODO...
 
+    use Endpay\Endpay;
+
     $endpay = new Endpay();
+
+    $endpay->setCommerceId('commerceId');
+    $endpay->setApiKey('apiKey');
