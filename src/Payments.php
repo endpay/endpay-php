@@ -37,14 +37,4 @@ class Payments {
 
         return json_decode($response->getBody(), true);
     }
-    
-    /**
-     * Delete payment
-     *
-     * @param integer $id
-     * @return object
-     */
-    public static function delete($id) {
-        echo 'delete - Payment';
-    }
 }
