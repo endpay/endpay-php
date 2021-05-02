@@ -10,6 +10,9 @@ Install package via composer
 ```cli
 composer require endpay/endpay-sdk
 ```
+## Documentation
+
+https://api-docs.endpay.cl
 
 ## Use
 
@@ -24,6 +27,7 @@ $endpay->setApiKey('apiKey');
 ```
 
 ### Create a payment
+Documentation: https://api-docs.endpay.cl/#crear-un-pago
 ```php
 $payment = $endpay->payments()->create([
     'subject' => 'Prueba desde SDK PHP',
@@ -33,6 +37,9 @@ $payment = $endpay->payments()->create([
 
 
 ### Read a payment
+
+Documentation: https://api-docs.endpay.cl/#ver-un-pago
+
 ```php
 $paymentData = $endpay->payments()->read($payment['id']);
 ```
