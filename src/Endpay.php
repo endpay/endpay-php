@@ -14,7 +14,7 @@ class Endpay {
     
     function __construct($production = true) {
         $this->apiVersion = '1.0';
-        $this->timeout = 5.0;
+        $this->timeout = 15;
         $this->base_uri = $production ? "https://api.endpay.cl/{$this->apiVersion}/" : "http://localhost:3000/api/{$this->apiVersion}/";
         $this->setClient();
     }
